@@ -1,26 +1,18 @@
+
+# Create a simple HTML page with a button that plays a sound effect when clicked
+html_content = """
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Geluid in Experience Builder</title>
-  <style>
-    #soundButton {
-      background-color: #004ca3;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    #soundButton:hover {
-      background-color: #003b82;
-    }
-  </style>
+  <title>Sound Button</title>
 </head>
 <body>
-  <button id="soundButton" onclick="playSound()">Geluid in Experience Builder</button>
-  <audio id="soundEffect" src="https://bramr123.github.io/Sound_button>
+  <h1>Click the Button to Play Sound</h1>
+  <button onclick="playSound()">Play Sound</button>
+  <audio id="soundEffect" src="sound.mp3"></audio>
+
+  <script>
     function playSound() {
       var audio = document.getElementById("soundEffect");
       audio.play();
@@ -28,3 +20,4 @@
   </script>
 </body>
 </html>
+"""
