@@ -1,20 +1,31 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Sound Button</title>
+  <title>Geluid in Experience Builder</title>
+  <style>
+    #soundButton {
+      background-color: #004ca3;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #soundButton:hover {
+      background-color: #003b82;
+    }
+  </style>
 </head>
 <body>
-  <h1>Click the Button to Play Sound</h1>
-  <button onclick="playSound()">Play Sound</button>
-  <audio id="soundEffect" src="sound.mp3"></audio>
+  <button id="soundButton">Geluid in Experience Builder</button>
+  sound.mp3</audio>
 
   <script>
-    function playSound() {
-      var audio = document.getElementById("soundEffect");
-      audio.play();
-    }
+    document.getElementById('soundButton').addEventListener('click', function() {
+      document.getElementById('soundEffect').play();
+    });
   </script>
 </body>
 </html>
